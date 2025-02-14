@@ -64,8 +64,8 @@ func Import(authClient *auth.Client, file string, mapFile string, attachmentMapF
 	}
 
 	// Require attachment map file.
-	if !strings.HasSuffix(strings.ToLower(mapFile), ".json") {
-		return errors.New("map file is required and must have a .json extension")
+	if !strings.HasSuffix(strings.ToLower(attachmentMapFile), ".json") {
+		return errors.New("Attachment map file is required and must have a .json extension")
 	}
 	mediaPathToImportedApiId, err := readMapFile(attachmentMapFile)
 	if err != nil {
